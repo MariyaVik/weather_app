@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '../../../../generated/common/data/models/location.freezed.dart';
-part '../../../../generated/common/data/models/location.g.dart';
+part '../../../../generated/features/location/data/models/location.freezed.dart';
+part '../../../../generated/features/location/data/models/location.g.dart';
 
 @freezed
 class Location with _$Location {
