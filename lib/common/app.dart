@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:weather_app/features/base/cubit/app_cubit.dart';
-import 'package:weather_app/features/auth/cubit/auth_cubit.dart';
 
+import '../features/auth/cubit/auth_cubit.dart';
+import '../features/base/cubit/app_cubit.dart';
 import '../features/location/cubit/location_cubit.dart';
 import '../features/weather/cubit/weather_cubit.dart';
 import 'navigation/router.dart';

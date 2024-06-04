@@ -31,11 +31,4 @@ class WeatherCubit extends Cubit<WeatherState> {
       emit(WeatherState.error(e.toString()));
     }
   }
-
-  DateTime _getNextDayTime() {
-    final DateTime today = DateTime.now();
-    final DateTime nextDay = DateTime(today.year, today.month, today.day)
-        .add(const Duration(days: 1));
-    return DateTime(nextDay.year, nextDay.month, nextDay.day, 15);
-  }
 }

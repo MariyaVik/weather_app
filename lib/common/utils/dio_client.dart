@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 
 class DioClient {
   final Dio _dio;
-  // Dio get dio => _dio;
   final String baseUrl;
   final String apiKey;
   final String apiKeyName;

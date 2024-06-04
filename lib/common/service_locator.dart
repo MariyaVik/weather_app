@@ -1,12 +1,12 @@
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:weather_app/common/data/app_cache/app_cache.dart';
-import 'package:weather_app/common/utils/dio_client.dart';
 
 import '../features/auth/data/repositories/auth_repository.dart';
 import '../features/weather/data/repositories/weather_repository.dart';
 import '../features/location/data/repositories/location_repository.dart';
+import 'data/app_cache/app_cache.dart';
 import 'data/app_cache/shared_preferences_cache.dart';
+import 'utils/dio_client.dart';
 
 class ServiceLocator {
   ServiceLocator._();

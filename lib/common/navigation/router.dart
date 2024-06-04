@@ -24,7 +24,7 @@ class AppRouter {
       GoRoute(
         name: RouteName.login,
         path: '/${RouteName.login}',
-        builder: (context, state) => LoginPage(),
+        builder: (context, state) => const LoginPage(),
       ),
       GoRoute(
         name: RouteName.base,
@@ -74,7 +74,7 @@ class AppRouter {
     errorPageBuilder: (context, state) {
       return MaterialPage(
         key: state.pageKey,
-        child: const ErrorPage(),
+        child: ErrorPage(error: state.error.toString()),
       );
     },
   );

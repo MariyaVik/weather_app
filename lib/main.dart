@@ -15,8 +15,8 @@ void main() async {
       statusBarColor: Colors.transparent,
       systemNavigationBarColor: Colors.white,
       systemNavigationBarIconBrightness: Brightness.dark,
-      statusBarIconBrightness: Brightness.dark, // для Android
-      statusBarBrightness: Brightness.light, // для iOS
+      statusBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.light,
     ),
   );
 

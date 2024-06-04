@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:weather_app/features/location/cubit/location_cubit.dart';
 
+import '../cubit/location_cubit.dart';
 import '../cubit/location_state.dart';
 
 class SelectLocationPage extends StatelessWidget {
