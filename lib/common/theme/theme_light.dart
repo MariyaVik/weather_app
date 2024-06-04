@@ -37,6 +37,8 @@ ColorScheme _colorScheme = ColorScheme.fromSwatch().copyWith(
 BottomNavigationBarThemeData _bottomNavigationBarThemeData =
     const BottomNavigationBarThemeData(
   elevation: 0,
+  showSelectedLabels: false,
+  showUnselectedLabels: false,
   type: BottomNavigationBarType.fixed,
   backgroundColor: AppColors.white,
   selectedItemColor: AppColors.greyDark,

@@ -1,15 +1,13 @@
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
+import '../../../../common/data/app_cache/app_cache.dart';
 import '../../cubit/auth_state.dart';
 import '../models/user_model.dart';
 import 'mok.dart';
 
 class AuthRepository {
-  final SharedPreferences _sharedPreferences;
+  final AppCache appCache;
 
-  AuthRepository(this._sharedPreferences);
-
-  static const String _accessTokenKey = 'access_token';
+  AuthRepository(this.appCache);
 
   Future<AuthState> login(String username, String password) async {
     try {
@@ -44,7 +42,7 @@ class AuthRepository {
   }
 
   Future<AuthState> checkAuthStatus() async {
-    final accessToken = _sharedPreferences.getString(_accessTokenKey);
+    final accessToken = appCache.getUser();
 
     if (accessToken != null) {
       final user = _decodeToken(accessToken);
@@ -54,16 +52,12 @@ class AuthRepository {
     }
   }
 
-  Future<String?> getAccessToken() async {
-    return _sharedPreferences.getString(_accessTokenKey);
-  }
-
   Future<void> _saveAuthData(String accessToken) async {
-    await _sharedPreferences.setString(_accessTokenKey, accessToken);
+    await appCache.saveUser(accessToken);
   }
 
   Future<void> _clearAuthData() async {
-    await _sharedPreferences.remove(_accessTokenKey);
+    await appCache.clearUser();
   }
 
   UserModel _decodeToken(String token) {

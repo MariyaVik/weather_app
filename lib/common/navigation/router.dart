@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../features/auth/cubit/auth_cubit.dart';
 import '../../features/auth/cubit/auth_state.dart';
 import '../../features/auth/ui/login_page.dart';
-import '../ui/pages/base_page.dart';
+import '../../features/base/ui/base_page.dart';
 import '../ui/pages/error_page.dart';
 import 'route_name.dart';
 
@@ -30,7 +30,7 @@ class AppRouter {
         name: RouteName.base,
         path: '/${RouteName.base}',
         builder: (context, state) {
-          return const BasePage();
+          return BasePage();
         },
         routes: [
           GoRoute(
